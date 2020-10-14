@@ -7,7 +7,7 @@ package-lock.json
 *.pdf
 *.psd
 *.sublime*
-source/
+build/
 node_modules/
 npm-debug.*
 Thumbs.db
