@@ -1,0 +1,30 @@
+.contacts__link,
+.contacts__item {
+  font-size: 15px;
+  line-height: 25px;
+  text-align: left;
+  color: $navy;
+  text-decoration: none;
+}
+
+.contacts__item {
+  opacity: 0.5;
+  &:hover,
+  &:active,
+  &:focus {
+    opacity: 1;
+  }
+}
+
+@include media-mobile {
+  .contacts__list {
+    padding: 5px 25px 25px 15px;
+  }
+}
+
+@include media-tablet {
+  .contacts {
+    padding-top: 38px;
+    padding-right: 10px;
+  }
+}

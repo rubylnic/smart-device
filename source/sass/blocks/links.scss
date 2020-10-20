@@ -1,0 +1,38 @@
+.links__list {
+  width: 535px;
+  columns: 2;
+  column-gap: 65px;
+}
+
+.links__link {
+  font-size: 15px;
+  line-height: 25px;
+  text-align: left;
+  color: $navy;
+  opacity: 0.5;
+  text-decoration: none;
+  &:hover,
+  &:active,
+  &:focus {
+    opacity: 1;
+  }
+}
+
+@include media-tablet {
+  .links {
+    padding-top: 38px;
+  }
+  .links__list {
+    columns: 1;
+    width: auto;
+  }
+}
+
+@include media-mobile {
+  .links__list {
+    padding: 0 15px;
+    padding-bottom: 25px;
+    columns: 1;
+    width: auto;
+  }
+}

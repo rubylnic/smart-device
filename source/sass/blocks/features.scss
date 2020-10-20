@@ -1,0 +1,130 @@
+.features {
+  padding-top: 109px;
+  margin-bottom: 80px;
+}
+
+.features__container {
+  max-width: 1194px;
+  margin: 0 auto;
+}
+
+.features__heading {
+  font-size: 24px;
+  font-family: $roboto-c;
+  color: $blue;
+  margin-bottom: 21px;
+}
+
+.features__text {
+  font-size: 16px;
+  line-height: 134%;
+}
+
+.features__list {
+  @include flex;
+  justify-content: space-around;
+}
+
+.features__item {
+  position: relative;
+  max-width: 570px;
+  min-height: 299px;
+  background-color: $white;
+  border: solid 1px $gray;
+  border-left: solid 3px $blue;
+  padding: 98px 42px 67px 44px;
+  margin-bottom: 30px;
+  @media (max-width: 1140px) {
+    max-width: 512px;
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $blue;
+    color: $white;
+    cursor: pointer;
+    outline: none;
+  }
+  &:hover .features__heading,
+  &:active .features__heading,
+  &:focus .features__heading {
+    color: $white;
+  }
+  &:hover .features__icon-img,
+  &:active .features__icon-img,
+  &:focus .features__icon-img {
+    filter: brightness(0) invert(1);
+  }
+}
+
+.features__icon {
+  position: absolute;
+  width: 35px;
+  top: -15px;
+  left: 41px;
+}
+
+@include media-tablet {
+  .features {
+    padding-top: 54px;
+    margin-bottom: 26px;
+  }
+  .features__container {
+    padding: 0 10px;
+  }
+  .features__item {
+    width: 345px;
+    min-height: 306px;
+    padding: 70px 25px 0 25px;
+    &:nth-of-type(3) {
+      min-height: 232px;
+      padding-right: 20px;
+    }
+    &:nth-of-type(4) {
+      min-height: 232px;
+    }
+  }
+  .features__icon {
+    position: absolute;
+    width: 31px;
+    top: -34px;
+    left: 25px;
+  }
+  .features__heading {
+    margin-bottom: 14px;
+  }
+}
+
+@include media-mobile {
+  .features {
+    padding-top: 37px;
+    margin-bottom: 38px;
+  }
+  .features__heading {
+    font-size: 20px;
+    margin-bottom: 10px;
+    line-height: 140%;
+  }
+  .features__item {
+    width: 290px;
+    padding: 75px 17px 0 23px;
+    min-height: 310px;
+    margin-bottom: 20px;
+    &:nth-of-type(2) {
+      padding-right: 10px;
+    }
+    &:nth-of-type(3) {
+      padding-top: 67px;
+      min-height: 244px;
+      // padding-right: 20px;
+    }
+    &:nth-of-type(4) {
+      min-height: 244px;
+    }
+  }
+  .features__icon {
+    width: 31px;
+    top: -35px;
+    left: 23px;
+  }
+}
