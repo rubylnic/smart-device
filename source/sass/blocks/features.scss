@@ -1,10 +1,10 @@
 .features {
-  padding-top: 109px;
+  padding-top: 114px;
   margin-bottom: 80px;
 }
 
 .features__container {
-  max-width: 1194px;
+  max-width: 1210px;
   margin: 0 auto;
 }
 
@@ -22,7 +22,7 @@
 
 .features__list {
   @include flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .features__item {
@@ -34,9 +34,11 @@
   border-left: solid 3px $blue;
   padding: 98px 42px 67px 44px;
   margin-bottom: 30px;
+
   @media (max-width: 1140px) {
     max-width: 512px;
   }
+
   &:hover,
   &:active,
   &:focus {
@@ -45,11 +47,13 @@
     cursor: pointer;
     outline: none;
   }
+
   &:hover .features__heading,
   &:active .features__heading,
   &:focus .features__heading {
     color: $white;
   }
+
   &:hover .features__icon-img,
   &:active .features__icon-img,
   &:focus .features__icon-img {
@@ -69,27 +73,29 @@
     padding-top: 54px;
     margin-bottom: 26px;
   }
-  .features__container {
-    padding: 0 10px;
-  }
+
   .features__item {
-    width: 345px;
+    width: 45%;
     min-height: 306px;
     padding: 70px 25px 0 25px;
+
     &:nth-of-type(3) {
       min-height: 232px;
       padding-right: 20px;
     }
+
     &:nth-of-type(4) {
       min-height: 232px;
     }
   }
+
   .features__icon {
     position: absolute;
     width: 31px;
     top: 25px;
     left: 25px;
   }
+
   .features__heading {
     margin-bottom: 14px;
   }
@@ -100,28 +106,34 @@
     padding-top: 37px;
     margin-bottom: 38px;
   }
+
   .features__heading {
     font-size: 20px;
     margin-bottom: 10px;
     line-height: 140%;
   }
+
   .features__item {
     width: 290px;
     padding: 75px 17px 0 23px;
     min-height: 310px;
     margin-bottom: 20px;
+
     &:nth-of-type(2) {
       padding-right: 10px;
     }
+
     &:nth-of-type(3) {
       padding-top: 67px;
       min-height: 244px;
       // padding-right: 20px;
     }
+
     &:nth-of-type(4) {
       min-height: 244px;
     }
   }
+
   .features__icon {
     width: 31px;
     top: 25px;

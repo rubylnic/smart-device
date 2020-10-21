@@ -5,11 +5,13 @@
   background-image: url("../img/plane@1x.png");
   background-repeat: no-repeat;
   background-position: -250px -60px;
+
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/plane@2x.png");
     background-size: 1745px auto;
   }
-  @media(min-width: 1550px) {
+
+  @media (min-width: 1700px) {
     background-position: 177px -60px;
   }
 }
@@ -20,19 +22,17 @@
   margin: 0 auto;
 }
 
-.questions__heading {
+.questions h2 {
   color: $white;
   font-family: $roboto-c;
   font-size: 36px;
   line-height: 140%;
-  text-align: right;
   margin-bottom: 11px;
   text-align: left;
 }
 
-.questions__text {
+.questions p {
   color: $white;
-  text-align: right;
   margin-bottom: 55px;
   margin-left: 5px;
   text-align: left;
@@ -43,58 +43,74 @@
   margin-left: auto;
 }
 
-.questions__list {
+.questions ul {
   @include flex;
+
   justify-content: space-between;
   margin-left: 5px;
 }
 
-.questions__item {
+.questions li {
   flex-grow: 1;
+
   &:first-of-type {
     margin-right: 31px;
     margin-bottom: 40px;
   }
 }
 
-.questions__input {
+.questions input {
   width: 100%;
   padding: 14px 0 17px 20px;
   border: none;
+  font-size: 16px;
   color: $white;
   background-color: rgba(255, 255, 255, 0.1);
+
   &:focus,
   &:active {
     outline: $white solid 2px;
   }
 }
 
-.questions__textarea {
+.questions textarea {
   resize: none;
   height: 154px;
   margin-bottom: 40px;
+  width: 100%;
+  padding: 14px 0 17px 20px;
+  border: none;
+  font-size: 16px;
+  color: $white;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  &:focus,
+  &:active {
+    outline: $white solid 2px;
+  }
 }
 
-.questions__input::-webkit-input-placeholder {
+.questions input::-webkit-input-placeholder {
   color: $white;
 }
 
-.questions__input::-moz-placeholder {
+.questions input::-moz-placeholder {
   color: $white;
 }
 
-.questions__input:-ms-placeholder {
+.questions input:-ms-placeholder {
   color: $white;
 }
 
 .questions__form-container {
   position: relative;
+
   @include flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.questions__submit {
+.questions button {
   width: 270px;
   font-size: 14px;
   font-family: $roboto-c;
@@ -107,24 +123,25 @@
   border: solid 1px $white;
   border-radius: 5px;
   letter-spacing: 0.05em;
+
   &:hover,
   &:active,
   &:focus {
     cursor: pointer;
     outline: none;
     background-color: $white;
-    color: $blue
+    color: $blue;
   }
 }
 
-.questions__label {
+.questions label {
   position: relative;
   width: 230px;
   color: $white;
   font-size: 14px;
 }
 
-.questions__checkbox+.questions__checkbox-indicator {
+.questions input[type="checkbox"] + .questions__checkbox-indicator {
   position: absolute;
   bottom: 15px;
   width: 16px;
@@ -132,11 +149,11 @@
   background: rgba(0, 0, 0, 0);
   border: 1px solid $white;
   right: 245px;
-  top: 0px;
+  top: 0;
 }
 
-.questions__checkbox:checked+.questions__checkbox-indicator {
-  background: url('../../img/tick.svg') center center no-repeat;
+.questions input[type="checkbox"]:checked + .questions__checkbox-indicator {
+  background: url("../../img/tick.svg") center center no-repeat;
 }
 
 @include media-tablet {
@@ -145,29 +162,32 @@
     padding-bottom: 103px;
     background: $blue;
   }
-  .questions__heading {
+
+  .questions h2 {
     font-size: 32px;
     margin-bottom: 19px;
   }
-  .questions__submit {
-    padding: 14px 89px;
+
+  .questions button {
+    width: 279px;
+    padding: 15px 0;
   }
+
   .questions__container-right {
     width: 590px;
     margin: 0 auto;
   }
-  .questions__label {
+
+  .questions label {
     margin-right: 4px;
   }
-  .questions__textarea {
+
+  .questions textarea {
     height: 159px;
     margin-bottom: 44px;
   }
-  .questions__submit {
-    width: 279px;
-    padding: 15px 0;
-  }
-  .questions__checkbox+.questions__checkbox-indicator {
+
+  .questions input[type="checkbox"] + .questions__checkbox-indicator {
     right: 252px;
   }
 }
@@ -178,56 +198,68 @@
     padding-top: 29px;
     padding-bottom: 41px;
   }
+
   .questions__container {
     padding: 0 15px;
   }
+
   .questions__container-right {
     width: 290px;
+    margin: 0 auto;
   }
-  .questions__heading {
+
+  .questions h2 {
     font-size: 28px;
     width: 243px;
     margin-bottom: 15px;
   }
-  .questions__list {
+
+  .questions ul {
     display: block;
     margin: 0;
   }
-  .questions__item {
+
+  .questions li {
     &:first-of-type {
       margin: 0;
       margin-bottom: 30px;
     }
+
     &:last-of-type {
       margin-bottom: 0;
     }
+
     margin: 0;
     margin-bottom: 30px;
   }
-  .questions__input {
+
+  .questions input {
     padding: 15px 16px 18px 20px;
   }
-  .questions__textarea {
+
+  .questions textarea {
     height: 104px;
     margin-bottom: 30px;
   }
-  .questions__text {
+
+  .questions label[for="checkbox"] {
+    margin-left: 33px;
+  }
+
+  .questions p {
     width: 269px;
     margin: 0;
     margin-bottom: 26px;
     line-height: 134%;
   }
-  .questions__submit {
+
+  .questions button {
     padding: 14px 0;
-  }
-  .questions__submit {
     width: 290px;
     margin-bottom: 30px;
   }
-  .questions__label {
-    margin-left: 33px;
-  }
-  .questions__checkbox+.questions__checkbox-indicator {
+
+  .questions input[type="checkbox"] + .questions__checkbox-indicator {
     left: -33px;
     top: 0;
   }

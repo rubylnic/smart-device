@@ -17,6 +17,7 @@
 
 .logo-socials__item {
   margin-right: 15px;
+
   &:last-of-type {
     margin-right: 0;
   }
@@ -36,6 +37,7 @@
     border-bottom: 1px solid rgba(98, 105, 98, 0.2);
     width: 100%;
     margin: 0;
+
     @include flex;
     align-items: center;
     justify-content: space-between;
@@ -71,6 +73,7 @@
   }
 
   .logo-socials__copyright {
+    display: block;
     font-size: 13px;
     text-align: center;
     text-transform: uppercase;

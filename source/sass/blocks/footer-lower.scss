@@ -11,6 +11,7 @@
   color: $gray;
   text-decoration: none;
   text-transform: uppercase;
+
   &:hover,
   &:active,
   &:focus {
@@ -20,12 +21,15 @@
 
 .footer-lower__item {
   opacity: 0.5;
+
   &:nth-of-type(1) {
-    margin-right: 59px;
+    margin-right: 72px;
   }
+
   &:nth-of-type(2) {
-    margin-right: 7.7%;
+    margin-right: 9.7%;
   }
+
   &:nth-of-type(4) {
     display: block;
     margin-left: auto;
@@ -48,9 +52,11 @@
   .footer-lower {
     padding-top: 21px;
   }
+
   .footer-lower__container {
     padding: 0 27px;
   }
+
   .footer-lower__copyright-1,
   .footer-lower__copyright-2 {
     display: none;
@@ -61,16 +67,20 @@
   .footer-lower {
     padding-top: 28px;
   }
+
   .footer-lower__copyright-1,
   .footer-lower__copyright-2 {
     display: none;
   }
+
   .footer-lower__list {
     display: block;
   }
+
   .footer-lower__item {
     text-align: center;
     margin-bottom: 21px;
+
     &:last-of-type {
       margin-bottom: 0;
     }

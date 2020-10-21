@@ -11,6 +11,7 @@
   color: $navy;
   opacity: 0.5;
   text-decoration: none;
+
   &:hover,
   &:active,
   &:focus {
@@ -22,6 +23,7 @@
   .links {
     padding-top: 38px;
   }
+
   .links__list {
     columns: 1;
     width: auto;

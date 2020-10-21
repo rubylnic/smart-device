@@ -5,9 +5,10 @@
 .about__container {
   max-width: 1170px;
   margin: 0 auto;
-  background: url("../img/year-d@1x.jpg") no-repeat -25px 0px;
+  background: url("../img/year-d@1x.png") no-repeat -25px 0;
+
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/year-d@2x.jpg");
+    background-image: url("../img/year-d@2x.png");
     background-size: 220px auto;
   }
 }
@@ -24,12 +25,15 @@
   font-size: 16px;
   line-height: 134%;
   margin-left: 178px;
+
   &:first-of-type {
     margin-bottom: 24px;
   }
+
   &:last-of-type {
     margin-bottom: 39px;
   }
+
   &-m {
     display: none;
   }
@@ -37,6 +41,7 @@
 
 .about__button {
   font-size: 14px;
+  letter-spacing: 0.05em;
   font-family: $roboto-c;
   font-weight: 700;
   text-transform: uppercase;
@@ -46,6 +51,7 @@
   border: solid 1px $blue;
   border-radius: 5px;
   margin-left: 178px;
+
   &:active,
   &:hover,
   &:focus {
@@ -60,36 +66,47 @@
   .about {
     padding-bottom: 83px;
   }
+
   .about__container {
     padding: 0 25px;
-    background: url("../img/year-t@1x.jpg") no-repeat 0px 0px;
+    background: url("../img/year-t@1x.png") no-repeat 0 0;
+
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/year-d@2x.jpg");
+      background-image: url("../img/year-d@2x.png");
       background-size: 251px auto;
     }
   }
+
   .about__heading {
     font-size: 32px;
     margin-left: 185px;
     margin-bottom: 29px;
   }
+
   .about__text {
     margin-left: 188px;
+
     &-m {
       display: inline-block;
+      vertical-align: bottom;
     }
+
     &-d {
       display: none;
     }
+
     &:last-of-type {
       margin-bottom: 43px;
     }
+
     .about__button {
       margin-left: 187px;
     }
   }
+
   .about__button {
-    margin-left: 188px;
+    margin-left: 187px;
+    padding: 14px 50px;
   }
 }
 
@@ -97,31 +114,41 @@
   .about {
     padding-bottom: 50px;
   }
+
   .about__container {
     background: rgba(0, 0, 0, 0);
     padding: 0 16px 15px;
   }
+
   .about__heading {
     font-size: 28px;
     margin: 0;
     margin-bottom: 23px;
   }
+
   .about__text {
     margin: 0;
+
     &:first-of-type {
       margin-bottom: 44px;
     }
+
     &:last-of-type {
       margin-bottom: 35px;
     }
+
     &-m {
       display: inline-block;
+      vertical-align: bottom;
     }
+
     &-d {
       display: none;
     }
   }
+
   .about__button {
     margin: 0;
+    padding: 14px 50px;
   }
 }
