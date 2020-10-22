@@ -1067,7 +1067,7 @@ input[type="radio"].visually-hidden {
   .questions textarea {
     height: 104px;
     margin-bottom: 30px; }
-  .questions label[for=checkbox] {
+  .questions label[for="checkbox"] {
     margin-left: 33px; }
   .questions p {
     width: 269px;
@@ -1338,7 +1338,7 @@ input[type="radio"].visually-hidden {
     padding-top: 19px;
     padding-bottom: 24px; }
   .footer__container {
-    padding: 0 26px; }
+    padding: 0; }
   .footer__upper {
     padding-bottom: 0; }
   .footer__upper-section {
@@ -1382,7 +1382,8 @@ input[type="radio"].visually-hidden {
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .links {
-    padding-top: 38px; }
+    padding-top: 38px;
+    padding-left: 26px; }
   .links__list {
     -webkit-columns: 1;
        -moz-columns: 1;
@@ -1443,7 +1444,10 @@ input[type="radio"].visually-hidden {
             justify-content: space-between; }
   .logo-socials__logo {
     margin: 0;
-    width: 230px; }
+    width: 257px;
+    padding-left: 26px; }
+  .logo-socials__list {
+    padding-right: 26px; }
   .logo-socials__copyright {
     display: block;
     font-size: 13px;
@@ -1497,7 +1501,7 @@ input[type="radio"].visually-hidden {
 @media (min-width: 768px) and (max-width: 1023px) {
   .contacts {
     padding-top: 38px;
-    padding-right: 10px; } }
+    padding-right: 36px; } }
 
 .footer-lower {
   padding-top: 14px; }
@@ -1569,6 +1573,76 @@ input[type="radio"].visually-hidden {
 .modal--closed {
   display: none; }
 
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(-2000px);
+            transform: translateY(-2000px); }
+  70% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px); }
+  90% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px); }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(-2000px);
+            transform: translateY(-2000px); }
+  70% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px); }
+  90% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px); }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px); }
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px); } }
+
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px); }
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px); } }
+
+.modal--error {
+  -webkit-animation: shake 0.6s;
+          animation: shake 0.6s; }
+
 .modal__overlay {
   position: fixed;
   top: 0;
@@ -1603,7 +1677,9 @@ input[type="radio"].visually-hidden {
   padding: 33px 39px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  margin: 0 auto; }
+  margin: 0 auto;
+  -webkit-animation: bounce 0.6s;
+          animation: bounce 0.6s; }
 
 .modal .modal__button {
   position: absolute;
