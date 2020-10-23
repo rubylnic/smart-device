@@ -90,15 +90,18 @@
   }
 }
 
-.questions input::-webkit-input-placeholder {
+.questions input::-webkit-input-placeholder,
+.questions textarea::-webkit-input-placeholder {
   color: $white;
 }
 
-.questions input::-moz-placeholder {
+.questions input::-moz-placeholder,
+.questions textarea::-moz-placeholder {
   color: $white;
 }
 
-.questions input:-ms-placeholder {
+.questions input:-ms-placeholder,
+.questions textarea:-ms-placeholder {
   color: $white;
 }
 

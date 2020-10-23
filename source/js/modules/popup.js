@@ -13,6 +13,7 @@
   var name = modal.querySelector('[name=modal-name]');
   var tel = modal.querySelector('[name=modal-tel]');
   var comment = modal.querySelector('[name=modal-comment]');
+  var checkbox = modal.querySelector('[name=modal-checkbox]');
 
   var isStorageSupport = true;
   var storage = '';
@@ -61,7 +62,7 @@
 
 
   form.addEventListener('submit', function (evt) {
-    if (!name.value || !tel.value) {
+    if (!name.value || !tel.value || !checkbox.checked) {
       evt.preventDefault();
       modal.classList.add('modal--error');
       modal.offsetWidth = modal.offsetWidth;

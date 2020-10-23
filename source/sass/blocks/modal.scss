@@ -152,15 +152,18 @@
   }
 }
 
-.modal input::-webkit-input-placeholder {
+.modal input::-webkit-input-placeholder,
+.modal textarea::-webkit-input-placeholder {
   color: $white;
 }
 
-.modal input::-moz-placeholder {
+.modal input::-moz-placeholder,
+.modal textarea::-moz-placeholder {
   color: $white;
 }
 
-.modal input:-ms-placeholder {
+.modal input:-ms-placeholder,
+.modal textarea:-ms-placeholder {
   color: $white;
 }
 

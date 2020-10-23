@@ -79,12 +79,7 @@
     min-height: 306px;
     padding: 70px 25px 0 25px;
 
-    &:nth-of-type(3) {
-      min-height: 232px;
-      padding-right: 20px;
-    }
-
-    &:nth-of-type(4) {
+    &--small {
       min-height: 232px;
     }
   }
@@ -119,23 +114,26 @@
     min-height: 310px;
     margin-bottom: 20px;
 
-    &:nth-of-type(2) {
+    &--pt-pr-temp {
       padding-right: 10px;
+      // в макете почему-то паддинг меньше, чем у остальных
     }
 
-    &:nth-of-type(3) {
+    &--pt-pp-temp {
       padding-top: 67px;
-      min-height: 244px;
-      // padding-right: 20px;
+
+      .features__heading {
+        margin-bottom: 18px;
+      }
+      // в макете почему-то паддинг больше, чем у остальных
     }
 
-    &:nth-of-type(4) {
+    &--small {
       min-height: 244px;
     }
   }
 
   .features__icon {
-    width: 31px;
     top: 25px;
     left: 23px;
   }
