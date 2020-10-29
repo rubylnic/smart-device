@@ -1,6 +1,25 @@
 'use strict';
 (function () {
+  var anchors = document.querySelectorAll('a[href*="#"]');
+
+  anchors.forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      var blockID = anchor.getAttribute('href').substr(1);
+
+      document.getElementById(blockID).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    });
+  });
+})();
+
+'use strict';
+(function () {
   var headings = document.querySelectorAll('.footer__upper-heading');
+  var activeHeading;
   var links = document.querySelectorAll('.footer__upper-list');
 
   headings.forEach(function (element) {
@@ -12,15 +31,54 @@
 
   headings.forEach(function (element) {
     element.addEventListener('click', function () {
-      if (element.nextElementSibling.classList.contains('footer__upper-list--closed')) {
-        element.classList.remove('footer__upper-heading--closed');
-        element.nextElementSibling.classList.remove('footer__upper-list--closed');
-      } else {
-        element.classList.add('footer__upper-heading--closed');
-        element.nextElementSibling.classList.add('footer__upper-list--closed');
+      element.classList.remove('footer__upper-heading--closed');
+      element.nextElementSibling.classList.remove('footer__upper-list--closed');
+      if (activeHeading) {
+        activeHeading.classList.add('footer__upper-heading--closed');
+        activeHeading.nextElementSibling.classList.add('footer__upper-list--closed');
       }
+      activeHeading = (activeHeading === element) ? 0 : element;
     });
   });
+})();
+
+'use strict';
+(function () {
+  var section = document.querySelector('.questions');
+  var form = section.querySelector('form');
+  var name = section.querySelector('[name=name]');
+  var tel = section.querySelector('[name=tel]');
+  var comment = section.querySelector('[name=comment]');
+  var checkbox = section.querySelector('[name=checkbox]');
+
+  var isStorageSupport = true;
+  var storage = '';
+
+  try {
+    storage = localStorage.getItem('login');
+  } catch (err) {
+    isStorageSupport = false;
+  }
+
+  if (storage) {
+    name.value = storage;
+    tel.value = storage;
+    comment.value = storage;
+  }
+
+  form.addEventListener('submit', function (evt) {
+    if (!name.value || !tel.value || !checkbox.checked) {
+      evt.preventDefault();
+      checkbox.setCustomValidity('Согласны на обработку персональных данных?');
+    } else {
+      if (isStorageSupport) {
+        localStorage.setItem('name', name.value);
+        localStorage.setItem('tel', tel.value);
+        localStorage.setItem('comment', comment.value);
+      }
+    }
+  });
+
 })();
 
 'use strict';
@@ -30,6 +88,7 @@
   var ENTER_KEYCODE = 13;
   var btnOpen = document.querySelector('.main-nav__btn');
   var btnClose = document.querySelector('.modal__button');
+  var html = document.querySelector('html');
   var modal = document.querySelector('.modal');
   var overlay = modal.querySelector('.modal__overlay');
   var modalContainer = modal.querySelector('.modal__container');
@@ -52,10 +111,12 @@
   var closeModal = function () {
     modal.classList.add('modal--closed');
     modal.classList.remove('modal--error');
+    html.style.overflow = 'auto';
   };
   var openModal = function (evt) {
     evt.preventDefault();
     modal.classList.remove('modal--closed');
+    html.style.overflow = 'hidden';
 
     if (storage) {
       name.value = storage;

@@ -1,5 +1,6 @@
 .main-header {
   position: relative;
+
   background: url("../img/bg-d@1x.jpg") no-repeat 0 center;
   background-color: $navy;
 
@@ -10,11 +11,12 @@
 }
 
 .main-header__container {
-  @include flex;
   justify-content: space-between;
   max-width: 1451px;
   margin: 0 auto;
   padding: 33px 20px 0 20px;
+
+  @include flex;
 }
 
 .main-header__logo-img--mobile {
@@ -23,10 +25,11 @@
 
 @media (max-width: 320px) {
   .main-header {
-    background: url("../img/bg-m@1x.jpg") no-repeat 0 0;
-    background-color: #ffffff;
     min-height: 235px;
     margin: 0;
+
+    background: url("../img/bg-m@1x.jpg") no-repeat 0 0;
+    background-color: #ffffff;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-m@2x.jpg");
@@ -49,9 +52,9 @@
 
 @include media-tablet {
   .main-header__container {
-    padding: 20px 15px 0 15px;
     width: 750px;
     margin: 0 auto;
+    padding: 20px 15px 0 15px;
   }
 }
 
@@ -67,8 +70,8 @@
 
 @include media-mobile {
   .main-header__container {
-    padding: 17px 16px 0 17px;
     width: auto;
     margin: 0 auto;
+    padding: 17px 16px 0 17px;
   }
 }

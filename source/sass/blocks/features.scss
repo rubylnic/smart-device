@@ -1,18 +1,19 @@
 .features {
-  padding-top: 114px;
   margin-bottom: 80px;
+  padding-top: 114px;
 }
 
 .features__container {
-  max-width: 1210px;
+  max-width: 1250px;
   margin: 0 auto;
 }
 
 .features__heading {
+  margin-bottom: 21px;
+
   font-size: 24px;
   font-family: $roboto-c;
   color: $blue;
-  margin-bottom: 21px;
 }
 
 .features__text {
@@ -21,63 +22,60 @@
 }
 
 .features__list {
-  @include flex;
   justify-content: space-evenly;
+  width: auto;
+
+  @include flex;
 }
 
 .features__item {
   position: relative;
+
+  width: 45%;
   max-width: 570px;
   min-height: 299px;
-  background-color: $white;
+  margin-bottom: 30px;
+  padding: 98px 42px 67px 44px;
+
   border: solid 1px $gray;
   border-left: solid 3px $blue;
-  padding: 98px 42px 67px 44px;
-  margin-bottom: 30px;
+  background-color: $white;
 
-  @media (max-width: 1140px) {
-    max-width: 512px;
-  }
-
-  &:hover,
-  &:active,
-  &:focus {
-    background-color: $blue;
+  &:hover {
     color: $white;
-    cursor: pointer;
+
+    border-color: $blue;
     outline: none;
+    background-color: $blue;
   }
 
-  &:hover .features__heading,
-  &:active .features__heading,
-  &:focus .features__heading {
+  &:hover .features__heading {
     color: $white;
   }
 
-  &:hover .features__icon-img,
-  &:active .features__icon-img,
-  &:focus .features__icon-img {
+  &:hover .features__icon-img {
     filter: brightness(0) invert(1);
   }
 }
 
 .features__icon {
   position: absolute;
-  width: 35px;
   top: 42px;
   left: 41px;
+
+  width: 35px;
 }
 
 @include media-tablet {
   .features {
-    padding-top: 54px;
     margin-bottom: 26px;
+    padding-top: 37px;
   }
 
   .features__item {
     width: 45%;
     min-height: 306px;
-    padding: 70px 25px 0 25px;
+    padding: 70px 22px 0 24px;
 
     &--small {
       min-height: 232px;
@@ -86,9 +84,10 @@
 
   .features__icon {
     position: absolute;
-    width: 31px;
     top: 25px;
     left: 25px;
+
+    width: 31px;
   }
 
   .features__heading {
@@ -98,39 +97,62 @@
 
 @include media-mobile {
   .features {
+    margin-bottom: 57px;
     padding-top: 37px;
-    margin-bottom: 38px;
   }
 
   .features__heading {
-    font-size: 20px;
     margin-bottom: 10px;
+
+    font-size: 20px;
     line-height: 140%;
   }
 
+  .features__list {
+    display: block;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
   .features__item {
-    width: 290px;
-    padding: 75px 17px 0 23px;
+    width: 100%;
     min-height: 310px;
+    margin: 0 auto;
     margin-bottom: 20px;
-
-    &--pt-pr-temp {
-      padding-right: 10px;
-      // в макете почему-то паддинг меньше, чем у остальных
-    }
-
-    &--pt-pp-temp {
-      padding-top: 67px;
-
-      .features__heading {
-        margin-bottom: 18px;
-      }
-      // в макете почему-то паддинг больше, чем у остальных
-    }
+    padding: 75px 17px 0 23px;
 
     &--small {
       min-height: 244px;
     }
+
+    &--pp-mb-temp {
+      min-height: 234px;
+      // в макете нет отступа и другой паддинг
+      padding-top: 64px;
+
+      .features__heading {
+        margin-bottom: -5px;
+      }
+    }
+
+    &--pp-pr-temp {
+      padding-right: 10px;
+      // в макете паддинг меньше, чем у остальных
+    }
+
+    &--pp-pt-temp {
+      padding-top: 67px;
+
+      .features__heading {
+        margin-bottom: 13px;
+      }
+
+      // в макете почему-то паддинг больше, чем у остальных
+    }
+  }
+
+  .features__text {
+    margin-bottom: 20px;
   }
 
   .features__icon {

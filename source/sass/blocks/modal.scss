@@ -48,68 +48,76 @@
 
 .modal__overlay {
   position: fixed;
+  z-index: 99;
   top: 0;
-  bottom: 0;
   right: 0;
+  bottom: 0;
   left: 0;
+
+  display: flex;
   overflow: hidden;
   overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  display: flex;
-  flex-flow: column nowrap;
   justify-content: center;
-  /* см. ниже */
   align-items: center;
-  z-index: 99;
   padding: 30px 0;
+
   background-color: rgba(0, 0, 0, 0.4);
+
+  -webkit-overflow-scrolling: touch;
+  flex-flow: column nowrap;
 }
 
 .modal__container {
   position: relative;
+
   width: 490px;
-  background-color: $blue;
-  padding: 33px 39px;
-  flex-shrink: 0;
   margin: 0 auto;
+  padding: 33px 39px;
 
   animation: bounce 0.6s;
+  background-color: $blue;
+
+  flex-shrink: 0;
 }
 
 .modal .modal__button {
   position: absolute;
+  top: 20px;
+  right: 20px;
+
   width: 17px;
   height: 17px;
   padding: 0;
+
   border: none;
   background: url("../img/cross.svg") no-repeat 0 0;
-  right: 20px;
-  top: 20px;
 
   &:hover,
   &:focus,
   &:active {
-    background: url("../img/cross.svg") no-repeat 0 0;
     opacity: 0.5;
+    background: url("../img/cross.svg") no-repeat 0 0;
   }
 }
 
 .modal h2 {
-  color: $white;
-  font-family: $roboto-c;
+  margin-bottom: 11px;
+
   font-size: 36px;
   line-height: 140%;
-  margin-bottom: 11px;
+  font-family: $roboto-c;
+  color: $white;
   text-align: left;
 }
 
 .modal p {
-  color: $white;
   width: 381px;
   margin-bottom: 51px;
   margin-left: 5px;
-  text-align: left;
+
   line-height: 134%;
+  color: $white;
+  text-align: left;
 }
 
 .modal ul {
@@ -117,16 +125,20 @@
 }
 
 .modal li {
-  flex-grow: 1;
   margin-bottom: 30px;
+
+  flex-grow: 1;
 }
 
 .modal input {
   width: 100%;
-  padding: 14px 0 17px 20px;
-  border: none;
+  padding: 14px 15px 17px 20px;
+
   font-size: 16px;
   color: $white;
+
+  border: none;
+  border-radius: 0;
   background-color: rgba(255, 255, 255, 0.1);
 
   &:focus,
@@ -136,14 +148,17 @@
 }
 
 .modal textarea {
-  resize: none;
+  width: 100%;
   height: 154px;
   margin-bottom: 40px;
-  width: 100%;
-  padding: 14px 0 17px 20px;
-  border: none;
+  padding: 14px 15px 17px 20px;
+
   font-size: 16px;
   color: $white;
+
+  resize: none;
+  border: none;
+  border-radius: 0;
   background-color: rgba(255, 255, 255, 0.1);
 
   &:focus,
@@ -170,41 +185,47 @@
 .modal__form-container {
   position: relative;
 
-  @include flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+
+  @include flex;
 }
 
 .modal button {
   width: 100%;
+  margin-bottom: 34px;
+  margin-left: 3px;
+  padding: 14px 0;
+
   font-size: 14px;
   font-family: $roboto-c;
-  font-weight: 700;
-  text-transform: uppercase;
   color: $white;
-  background-color: $blue;
-  padding: 14px 0;
-  margin-left: 3px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
   border: solid 1px $white;
   border-radius: 5px;
-  letter-spacing: 0.05em;
-  margin-bottom: 34px;
+  background-color: $blue;
 
   &:hover,
   &:active,
   &:focus {
+    color: $blue;
+
     cursor: pointer;
     outline: none;
     background-color: $white;
-    color: $blue;
   }
 }
 
 .modal label {
   position: relative;
+
   width: 230px;
-  color: $white;
+
   font-size: 14px;
+  color: $white;
 }
 
 .modal label[for="modal-checkbox"] {
@@ -214,13 +235,15 @@
 
 .modal input[type="checkbox"] + .modal__checkbox-indicator {
   position: absolute;
+  top: 0;
   bottom: 15px;
+  left: -35px;
+
   width: 16px;
   height: 16px;
-  background: rgba(0, 0, 0, 0);
+
   border: 1px solid $white;
-  left: -35px;
-  top: 0;
+  background: rgba(0, 0, 0, 0);
 }
 
 .modal input[type="checkbox"]:checked + .modal__checkbox-indicator {

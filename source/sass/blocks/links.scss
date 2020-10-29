@@ -1,16 +1,19 @@
 .links__list {
-  width: 535px;
-  columns: 2;
   column-gap: 65px;
+
+  @media (min-width: 1210px) {
+    columns: 2;
+  }
 }
 
 .links__link {
   font-size: 15px;
   line-height: 25px;
-  text-align: left;
   color: $navy;
-  opacity: 0.5;
+  text-align: left;
   text-decoration: none;
+
+  opacity: 0.5;
 
   &:hover,
   &:active,
@@ -26,16 +29,18 @@
   }
 
   .links__list {
-    columns: 1;
     width: auto;
+
+    columns: 1;
   }
 }
 
 @include media-mobile {
   .links__list {
+    width: auto;
     padding: 0 15px;
     padding-bottom: 25px;
+
     columns: 1;
-    width: auto;
   }
 }

@@ -24,6 +24,8 @@
 }
 
 .logo-socials__link {
+  outline: none;
+
   &:hover,
   &:active,
   &:focus {
@@ -33,19 +35,20 @@
 
 @include media-tablet {
   .logo-socials {
-    padding-bottom: 21px;
-    border-bottom: 1px solid rgba(98, 105, 98, 0.2);
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     margin: 0;
+    padding-bottom: 21px;
+
+    border-bottom: 1px solid rgba(98, 105, 98, 0.2);
 
     @include flex;
-    align-items: center;
-    justify-content: space-between;
   }
 
   .logo-socials__logo {
-    margin: 0;
     width: 257px;
+    margin: 0;
     padding-left: 26px;
   }
 
@@ -55,35 +58,40 @@
 
   .logo-socials__copyright {
     display: block;
+
     font-size: 13px;
-    letter-spacing: 0.04em;
     color: $navy;
-    opacity: 0.5;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
+
+    opacity: 0.5;
   }
 }
 
 @include media-mobile {
   .logo-socials {
-    padding: 0 20px;
+    justify-content: center;
     width: 100%;
     margin: 0 auto;
-    justify-content: center;
+    padding: 0 20px;
+
     border-bottom: 1px solid rgba(98, 105, 98, 0.2);
   }
 
   .logo-socials__logo {
-    text-align: center;
     margin-bottom: 29px;
+
+    text-align: center;
   }
 
   .logo-socials__copyright {
     display: block;
+    margin-bottom: 38px;
+
     font-size: 13px;
     text-align: center;
-    text-transform: uppercase;
     letter-spacing: 0.04em;
-    margin-bottom: 38px;
+    text-transform: uppercase;
   }
 
   .logo-socials__list {

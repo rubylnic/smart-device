@@ -1,12 +1,13 @@
 .description {
+  padding-top: 231px;
+  padding-bottom: 272px;
+
   background: url("../img/board-d@1x.png") no-repeat 700px 173px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/board-d@2x.png");
     background-size: 705px auto;
   }
-  padding-top: 231px;
-  padding-bottom: 288px;
 
   @media (min-width: 1550px) {
     background-position: 85% 173px;
@@ -14,61 +15,73 @@
 }
 
 .description__container {
+  position: relative;
+
+  max-width: 1494px;
   margin: 0 auto;
   padding: 0 36px;
-  max-width: 1494px;
 }
 
 .description__heading {
-  font-family: $roboto-c;
-  font-weight: 700;
-  font-size: 80px;
-  text-transform: uppercase;
-  color: $white;
-  letter-spacing: 0.07em;
   margin-bottom: 25px;
+
+  font-size: 80px;
+  font-family: $roboto-c;
+  color: $white;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
 }
 
 .description__text {
+  position: relative;
+
+  width: 610px;
+  margin-bottom: 46px;
+  margin-left: 98px;
+
   font-size: 22px;
   line-height: 157%;
   color: $white;
-  width: 610px;
-  position: relative;
-  margin-bottom: 62px;
-  margin-left: 98px;
 
   &::before {
-    content: "";
     position: absolute;
-    background-color: $white;
-    width: 66px;
-    height: 2px;
     top: 17px;
     left: -93px;
+
+    width: 66px;
+    height: 2px;
+
+    content: "";
+    background-color: $white;
   }
 }
 
 .description__button {
-  font-family: $roboto-c;
-  font-weight: 700;
-  letter-spacing: 0.05em;
+  display: block;
+  width: 407px;
+  margin-left: 98px;
+  padding: 18px 0;
+
   font-size: 16px;
-  text-transform: uppercase;
+  font-family: $roboto-c;
   color: $white;
+  font-weight: 700;
+  text-align: center;
   text-decoration: none;
-  background-color: $blue;
-  padding: 18px 46px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
   border: none;
   border-radius: 5px;
-  margin-left: 98px;
+  background-color: $blue;
 
   &:focus,
   &:active,
   &:hover {
+    cursor: pointer;
     opacity: 0.7;
     outline: none;
-    cursor: pointer;
   }
 }
 
@@ -76,16 +89,34 @@
   display: none;
 }
 
+.description__scroll {
+  position: absolute;
+  bottom: -150px;
+  left: 0;
+
+  font-size: 14px;
+  color: $white;
+  text-decoration: none;
+
+  transform: rotate(-90deg);
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
 @include media-tablet {
   .description {
+    padding-top: 113px;
+    padding-bottom: 180px;
+
     background: url("../img/board-t@1x.png") no-repeat right 37px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/board-t@2x.png");
       background-size: 260px auto;
     }
-    padding-top: 113px;
-    padding-bottom: 180px;
   }
 
   .description__container {
@@ -93,33 +124,41 @@
   }
 
   .description__heading {
-    font-size: 60px;
     width: 310px;
     margin-bottom: 30px;
+
+    font-size: 60px;
   }
 
   .description__text {
-    font-size: 18px;
     width: 356px;
+    margin-bottom: 56px;
     margin-left: 51px;
-    margin-bottom: 74px;
+
+    font-size: 18px;
 
     &::before {
-      width: 33px;
       top: 15px;
       left: -49px;
+
+      width: 33px;
     }
   }
 
   .description__button {
-    padding: 18px 32px;
+    width: 379px;
     margin-left: 51px;
+  }
+
+  .description__scroll {
+    display: none;
   }
 }
 
 @include media-mobile {
   .description {
     padding-bottom: 70px;
+
     background: url("../img/board-m@1x.png") no-repeat right 37px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -134,27 +173,29 @@
 
   .description__heading {
     width: auto;
-    font-size: 40px;
     margin-bottom: 29px;
+
+    font-size: 40px;
   }
 
   .description__text {
     width: auto;
-    margin-left: 51px;
-    font-size: 16px;
     margin-bottom: 40px;
+    margin-left: 51px;
+
+    font-size: 16px;
 
     &::before {
-      width: 33px;
       top: 15px;
       left: -49px;
+
+      width: 33px;
     }
   }
 
   .description__button {
-    padding: 18px 33px;
-    margin: 0;
-    margin-left: 3px;
+    width: 287px;
+    margin: 0 auto;
   }
 
   .description__button--d {
@@ -163,5 +204,9 @@
 
   .description__button--m {
     display: block;
+  }
+
+  .description__scroll {
+    display: none;
   }
 }

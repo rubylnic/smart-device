@@ -1,11 +1,12 @@
 .main-nav {
-  padding-top: 15px;
   width: 660px;
+  padding-top: 15px;
 }
 
 .main-nav__list {
-  @include flex;
   justify-content: space-between;
+
+  @include flex;
 }
 
 .main-nav__item {
@@ -16,6 +17,14 @@
 
 .main-nav__link {
   text-decoration: none;
+
+  outline: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    opacity: 0.5;
+  }
 }
 
 .main-nav__link-img {
@@ -38,14 +47,16 @@
 }
 
 .main-nav__btn {
-  font-weight: 700;
-  font-family: $roboto-c;
+  padding: 14px 28px;
+
   font-size: 14px;
   line-height: 16.41px;
-  letter-spacing: 0.05em;
+  font-family: $roboto-c;
   color: $white;
+  font-weight: 700;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  padding: 14px 28px;
+
   border: solid $white 1px;
   border-radius: 3px;
 }
@@ -62,8 +73,8 @@
 
 @include media-mobile-tablet {
   .main-nav {
-    padding-top: 15px;
     width: auto;
+    padding-top: 15px;
   }
 
   .main-nav__list {

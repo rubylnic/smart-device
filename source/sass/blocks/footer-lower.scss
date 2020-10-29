@@ -5,22 +5,20 @@
 .footer-lower__link,
 .footer-lower__item {
   font-size: 13px;
-  letter-spacing: 0.04em;
   line-height: 25px;
+  color: rgba(27, 45, 55, 0.5);
   text-align: left;
-  color: $gray;
   text-decoration: none;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
+}
 
+.footer-lower__link {
   &:hover,
   &:active,
   &:focus {
-    opacity: 1;
+    color: rgba(27, 45, 55, 1);
   }
-}
-
-.footer-lower__item {
-  opacity: 0.5;
 }
 
 .footer-lower__copyright-1 {
@@ -33,19 +31,20 @@
 
 .footer-lower__copyright-3 {
   display: block;
-  margin-left: auto;
   margin-right: 0;
+  margin-left: auto;
 }
 
 .footer-lower__container {
-  margin: 0 auto;
   max-width: 1451px;
+  margin: 0 auto;
   padding: 0 20px;
 }
 
 .footer-lower__list {
-  @include flex;
   justify-content: space-between;
+
+  @include flex;
 }
 
 @include media-tablet {
@@ -78,8 +77,9 @@
   }
 
   .footer-lower__item {
-    text-align: center;
     margin-bottom: 21px;
+
+    text-align: center;
 
     &:last-of-type {
       margin-bottom: 0;

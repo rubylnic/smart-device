@@ -1,10 +1,8 @@
-.about {
-  padding-bottom: 110px;
-}
-
 .about__container {
   max-width: 1170px;
   margin: 0 auto;
+  padding-bottom: 124px;
+
   background: url("../img/year-d@1x.png") no-repeat -25px 0;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -14,17 +12,19 @@
 }
 
 .about__heading {
-  font-size: 36px;
-  font-family: $roboto-c;
-  line-height: 140%;
   margin-bottom: 18px;
   margin-left: 178px;
+
+  font-size: 36px;
+  line-height: 140%;
+  font-family: $roboto-c;
 }
 
 .about__text {
+  margin-left: 178px;
+
   font-size: 16px;
   line-height: 134%;
-  margin-left: 178px;
 
   &-m {
     display: none;
@@ -36,53 +36,57 @@
     }
 
     &:last-of-type {
-      margin-bottom: 39px;
+      margin-bottom: 53px;
     }
   }
 }
 
 .about__button {
-  font-size: 14px;
-  letter-spacing: 0.05em;
-  font-family: $roboto-c;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: $blue;
-  background-color: $white;
+  margin-left: 178px;
   padding: 14px 53px;
+
+  font-size: 14px;
+  font-family: $roboto-c;
+  color: $blue;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
   border: solid 1px $blue;
   border-radius: 5px;
-  margin-left: 178px;
+  background-color: $white;
 
   &:active,
   &:hover,
   &:focus {
+    color: $white;
+
     cursor: pointer;
     outline: none;
     background-color: $blue;
-    color: $white;
   }
 }
 
 @include media-tablet {
-  .about {
-    padding-bottom: 83px;
-  }
-
   .about__container {
     padding: 0 25px;
+    padding-bottom: 98px;
+
     background: url("../img/year-t@1x.png") no-repeat 0 0;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/year-d@2x.png");
+      background-image: url("../img/year-t@2x.png");
       background-size: 251px auto;
     }
   }
 
+
   .about__heading {
-    font-size: 32px;
-    margin-left: 185px;
     margin-bottom: 29px;
+    margin-left: 185px;
+
+    font-size: 32px;
   }
 
   .about__text {
@@ -90,6 +94,7 @@
 
     &-m {
       display: inline-block;
+
       vertical-align: bottom;
     }
 
@@ -99,7 +104,7 @@
 
     &--margin {
       &:last-of-type {
-        margin-bottom: 43px;
+        margin-bottom: 55px;
       }
 
       .about__button {
@@ -115,19 +120,18 @@
 }
 
 @include media-mobile {
-  .about {
-    padding-bottom: 50px;
-  }
-
   .about__container {
-    background: rgba(0, 0, 0, 0);
     padding: 0 16px 15px;
+    padding-bottom: 78px;
+
+    background: rgba(0, 0, 0, 0);
   }
 
   .about__heading {
-    font-size: 28px;
     margin: 0;
     margin-bottom: 23px;
+
+    font-size: 28px;
   }
 
   .about__text {
@@ -135,6 +139,7 @@
 
     &-m {
       display: inline-block;
+
       vertical-align: bottom;
     }
 
@@ -148,7 +153,7 @@
       }
 
       &:last-of-type {
-        margin-bottom: 35px;
+        margin-bottom: 48px;
       }
     }
   }

@@ -5,6 +5,7 @@
   var ENTER_KEYCODE = 13;
   var btnOpen = document.querySelector('.main-nav__btn');
   var btnClose = document.querySelector('.modal__button');
+  var html = document.querySelector('html');
   var modal = document.querySelector('.modal');
   var overlay = modal.querySelector('.modal__overlay');
   var modalContainer = modal.querySelector('.modal__container');
@@ -27,10 +28,12 @@
   var closeModal = function () {
     modal.classList.add('modal--closed');
     modal.classList.remove('modal--error');
+    html.style.overflow = 'auto';
   };
   var openModal = function (evt) {
     evt.preventDefault();
     modal.classList.remove('modal--closed');
+    html.style.overflow = 'hidden';
 
     if (storage) {
       name.value = storage;

@@ -27,10 +27,10 @@
       <nav class="main-nav">
         <ul class="main-nav__list list">
           <li class="main-nav__item">
-            <a href="infogsd.ru" class="main-nav__link"><svg class="main-nav__link-img main-nav__link-img--envelope" width="100%" height="100%"> <use xlink:href="img/sprite_auto.svg#icon-envelope"></use></svg><span class="main-nav__link-text">infogsd.ru</span></a>
+            <a href="mailto:infogsd.ru" class="main-nav__link" aria-label="infogsd.ru"><svg class="main-nav__link-img main-nav__link-img--envelope" width="100%" height="100%"> <use xlink:href="img/sprite_auto.svg#icon-envelope"></use></svg><span class="main-nav__link-text">infogsd.ru</span></a>
           </li>
           <li class="main-nav__item">
-            <a href="tel:+74950005252" class="main-nav__link"><svg class="main-nav__link-img main-nav__link-img--phone" width="100%" height="100%"> <use xlink:href="img/sprite_auto.svg#icon-phone"></use></svg><span class="main-nav__link-text">+7 (495) 000 52 52</span></a>
+            <a href="tel:+74950005252" class="main-nav__link" aria-label="+74950005252"><svg class="main-nav__link-img main-nav__link-img--phone" width="100%" height="100%"> <use xlink:href="img/sprite_auto.svg#icon-phone"></use></svg><span class="main-nav__link-text">+7 (495) 000 52 52</span></a>
           </li>
           <li class="main-nav__item">
             <a href="#" class="main-nav__link main-nav__btn">Заказать звонок</a>
@@ -44,34 +44,35 @@
         <p class="description__text paragraph">производство и монтаж, поставка комплектующих, блоков и модулей</p>
         <a class="description__button description__button--d" href="#questions">Получить бесплатную консультацию</a>
         <a class="description__button description__button--m" href="#questions">Бесплатная консультация</a>
+        <a href="#features" class="description__scroll">Скролл вниз</a>
       </div>
     </section>
   </header>
   <main>
     <div class="white-wrapper">
-      <section class="features">
+      <section class="features" id="features">
         <h2 class="features__heading heading visually-hidden">Наши преимущества</h2>
         <div class="features__container container">
           <ul class="features__list list">
-            <li class="features__item" tabindex="0">
+            <li class="features__item">
               <div class="features__icon"><svg class="features__icon-img" width="100%" height="100%"> <use xlink:href="img/sprite_auto.svg#icon-stopwatch"></use></svg></div>
               <h2 class="features__heading heading">Оперативные сроки</h2>
               <p class="features__text paragraph">Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
             </li>
-            <li class="features__item features__item--pt-pr-temp" tabindex="0">
+            <li class="features__item features__item--pp-pr-temp">
               <div class="features__icon"><svg class="features__icon-img" width="100%" height="100%"> <use xlink:href="img/sprite_auto.svg#icon-hired"></use></svg></div>
               <h2 class="features__heading heading">Крупные поставщики</h2>
               <p class="features__text paragraph">
                 Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.
               </p>
             </li>
-            <li class="features__item features__item--small" tabindex="0">
+            <li class="features__item features__item--small features__item--pp-mb-temp">
               <div class="features__icon"><svg class="features__icon-img" width="100%" height="100%"> <use xlink:href="img/sprite_auto.svg#icon-detective"></use></svg></div>
               <h2 class="features__heading heading">Полная конфиденциальность</h2>
               <p class="features__text paragraph">По желанию клиента мы обеспечиваем полную конфеденциальность.
               </p>
             </li>
-            <li class="features__item features__item--small features__item--pt-pp-temp" tabindex="0">
+            <li class="features__item features__item--small features__item--pp-pt-temp">
               <div class="features__icon"><svg class="features__icon-img" width="100%" height="100%"> <use xlink:href="img/sprite_auto.svg#icon-tag"></use></svg></div>
               <h2 class="features__heading heading">Персонализация стоимости</h2>
               <p class="features__text paragraph">Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>
@@ -87,7 +88,7 @@
             <span class="about__text-d">(РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.
             </span>
           </p>
-          <button class="about__button" type="button" aria-label="Подробнее">Подробнее</button>
+          <a class="about__button" href="#">Подробнее</a>
         </div>
       </section>
     </div>
@@ -122,12 +123,13 @@
             <ul class="list">
               <li>
                 <label for="name">
-              <input type="text" id="name" name="name" placeholder="Имя" required="">
-              </label>
+                  <input type="text" id="name" name="name" placeholder="Имя" required="">
+                </label>
               </li>
               <li>
                 <label for="tel">
-              <input type="tel" id="tel" name="tel" minlength="11" placeholder="Телефон" required=""></label>
+                  <input type="tel" id="tel" name="tel" minlength="11" placeholder="Телефон" required="">
+                </label>
               </li>
               <li>
                 <label for="text">
@@ -138,7 +140,7 @@
               <button aria-label="Отправить форму">Задать вопрос</button>
               <label for="checkbox">
                 <input class="visually-hidden" type="checkbox" id="checkbox" name="checkbox" checked="">
-                <span class="questions__checkbox-indicator"></span>
+                <span class="questions__checkbox-indicator" tabindex="0"></span>
                 Я согласен на обработку  персональных данных
               </label>
             </div>
@@ -161,21 +163,21 @@
           <p class="logo-socials__copyright paragraph">1999-2018 SD Service Devices</p>
           <ul class="logo-socials__list list">
             <li class="logo-socials__item">
-              <a href="https://facebook.com" class="logo-socials__link">
+              <a href="https://facebook.com" class="logo-socials__link" aria-label="facebook.com">
                 <svg class="logo-socials__img" width="27" height="27">
             <use xlink:href="img/sprite_auto.svg#icon-facebook" width="27" height="27"></use>
           </svg>
               </a>
             </li>
             <li class="logo-socials__item">
-              <a href="https://ok.ru/" class="logo-socials__link">
+              <a href="https://ok.ru/" class="logo-socials__link" aria-label="ok.ru">
                 <svg class="logo-socials__img" width="27" height="27">
             <use xlink:href="img/sprite_auto.svg#icon-odnoklassniki" width="27" height="27"></use>
           </svg>
               </a>
             </li>
             <li class="logo-socials__item">
-              <a href="https://vk.com/" class="logo-socials__link">
+              <a href="https://vk.com/" class="logo-socials__link" aria-label="vk.com">
                 <svg class="logo-socials__img" width="27" height="27">
             <use xlink:href="img/sprite_auto.svg#icon-vk" width="27" height="27"></use>
           </svg>
@@ -251,7 +253,8 @@
       </div>
     </div>
   </section>
-  <script src="js/vendors.js" async=""></script>
+  <script src="js/vendors.js"></script>
+  <script>svg4everybody(); // run it now or whenever you are ready</script>
   <script>
     // Picture element HTML5 shiv
     document.createElement("picture");
