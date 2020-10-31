@@ -193,10 +193,12 @@
 
   border: 1px solid $white;
   background: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  outline: none;
 }
 
 .questions input[type="checkbox"]:checked + .questions__checkbox-indicator {
-  background: url("../../img/tick.svg") center center no-repeat;
+  background: url("../img/tick.svg") center center no-repeat;
 }
 
 @include media-tablet {

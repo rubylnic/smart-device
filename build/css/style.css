@@ -1069,10 +1069,12 @@ input[type="radio"].visually-hidden {
   width: 16px;
   height: 16px;
   border: 1px solid #ffffff;
-  background: rgba(0, 0, 0, 0); }
+  background: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  outline: none; }
 
 .questions input[type="checkbox"]:checked + .questions__checkbox-indicator {
-  background: url("../../img/tick.svg") center center no-repeat; }
+  background: url("../img/tick.svg") center center no-repeat; }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .questions {
@@ -1866,10 +1868,12 @@ input[type="radio"].visually-hidden {
   width: 16px;
   height: 16px;
   border: 1px solid #ffffff;
-  background: rgba(0, 0, 0, 0); }
+  background: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  outline: none; }
 
 .modal input[type="checkbox"]:checked + .modal__checkbox-indicator {
-  background: url("../../img/tick.svg") center center no-repeat; }
+  background: url("../img/tick.svg") center center no-repeat; }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .modal {
