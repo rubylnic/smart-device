@@ -721,7 +721,7 @@ input[type="radio"].visually-hidden {
   min-height: 299px;
   margin-bottom: 30px;
   padding: 98px 42px 67px 44px;
-  border: solid 1px #666666;
+  border: solid 1px #ebebeb;
   border-left: solid 3px #00b2ff;
   background-color: #ffffff; }
   .features__item:hover {
@@ -734,6 +734,9 @@ input[type="radio"].visually-hidden {
   .features__item:hover .features__icon-img {
     -webkit-filter: brightness(0) invert(1);
             filter: brightness(0) invert(1); }
+
+.features__item--pp-pr-temp {
+  padding-right: 30px; }
 
 .features__icon {
   position: absolute;
@@ -751,6 +754,8 @@ input[type="radio"].visually-hidden {
     padding: 70px 22px 0 24px; }
     .features__item--small {
       min-height: 232px; }
+    .features__item--pp-pr-temp {
+      padding-right: 22px; }
   .features__icon {
     position: absolute;
     top: 25px;
@@ -1040,6 +1045,9 @@ input[type="radio"].visually-hidden {
   width: 270px;
   margin-left: 3px;
   padding: 14px 0;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
   font-size: 14px;
   font-family: "Roboto-condensed", "Arial", sans-serif;
   color: #ffffff;
@@ -1061,6 +1069,11 @@ input[type="radio"].visually-hidden {
   font-size: 14px;
   color: #ffffff; }
 
+.questions label[for="questions-checkbox"] {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2; }
+
 .questions input[type="checkbox"] + .questions__checkbox-indicator {
   position: absolute;
   top: 0;
@@ -1072,6 +1085,8 @@ input[type="radio"].visually-hidden {
   background: rgba(0, 0, 0, 0);
   cursor: pointer;
   outline: none; }
+  .questions input[type="checkbox"] + .questions__checkbox-indicator:focus {
+    opacity: 0.5; }
 
 .questions input[type="checkbox"]:checked + .questions__checkbox-indicator {
   background: url("../img/tick.svg") center center no-repeat; }
@@ -1081,6 +1096,8 @@ input[type="radio"].visually-hidden {
     padding-top: 78px;
     padding-bottom: 103px;
     background: #00b2ff; }
+  .questions li:first-of-type {
+    margin-bottom: 22px; }
   .questions h2 {
     margin-bottom: 19px;
     font-size: 32px; }
@@ -1131,7 +1148,7 @@ input[type="radio"].visually-hidden {
   .questions textarea {
     height: 104px;
     margin-bottom: 27px; }
-  .questions label[for="checkbox"] {
+  .questions label[for="questions-checkbox"] {
     margin-left: 33px; }
   .questions p {
     width: 269px;
@@ -1251,7 +1268,8 @@ input[type="radio"].visually-hidden {
     .services__item:last-of-type {
       margin: 0 auto; }
     .services__item--production .services__link {
-      background: url("../img/card-1-t@1x.png") no-repeat 0 0; } }
+      background: url("../img/card-1-t@1x.png") no-repeat 0 0;
+      width: 715px; } }
     @media (min-width: 768px) and (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (max-width: 1023px) and (min-resolution: 144dpi), (min-width: 768px) and (max-width: 1023px) and (min-resolution: 1.5dppx) {
       .services__item--production .services__link {
         background-image: url("../img/card-1-t@2x.png");
@@ -1662,48 +1680,6 @@ input[type="radio"].visually-hidden {
     -webkit-transform: translateY(0);
             transform: translateY(0); } }
 
-@-webkit-keyframes shake {
-  0%,
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0); }
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
-    -webkit-transform: translateX(-10px);
-            transform: translateX(-10px); }
-  20%,
-  40%,
-  60%,
-  80% {
-    -webkit-transform: translateX(10px);
-            transform: translateX(10px); } }
-
-@keyframes shake {
-  0%,
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0); }
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
-    -webkit-transform: translateX(-10px);
-            transform: translateX(-10px); }
-  20%,
-  40%,
-  60%,
-  80% {
-    -webkit-transform: translateX(10px);
-            transform: translateX(10px); } }
-
-.modal--error {
-  -webkit-animation: shake 0.6s;
-          animation: shake 0.6s; }
-
 .modal__overlay {
   position: fixed;
   z-index: 99;
@@ -1835,6 +1811,9 @@ input[type="radio"].visually-hidden {
   margin-bottom: 34px;
   margin-left: 3px;
   padding: 14px 0;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
   font-size: 14px;
   font-family: "Roboto-condensed", "Arial", sans-serif;
   color: #ffffff;
@@ -1858,7 +1837,10 @@ input[type="radio"].visually-hidden {
 
 .modal label[for="modal-checkbox"] {
   width: 337px;
-  margin-left: 43px; }
+  margin-left: 43px;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2; }
 
 .modal input[type="checkbox"] + .modal__checkbox-indicator {
   position: absolute;

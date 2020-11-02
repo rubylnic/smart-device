@@ -20,32 +20,6 @@
   }
 }
 
-@keyframes shake {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
-    transform: translateX(-10px);
-  }
-
-  20%,
-  40%,
-  60%,
-  80% {
-    transform: translateX(10px);
-  }
-}
-
-.modal--error {
-  animation: shake 0.6s;
-}
-
 .modal__overlay {
   position: fixed;
   z-index: 99;
@@ -196,6 +170,7 @@
   margin-bottom: 34px;
   margin-left: 3px;
   padding: 14px 0;
+  order: 1;
 
   font-size: 14px;
   font-family: $roboto-c;
@@ -231,6 +206,7 @@
 .modal label[for="modal-checkbox"] {
   width: 337px;
   margin-left: 43px;
+  order: 2;
 }
 
 .modal input[type="checkbox"] + .modal__checkbox-indicator {

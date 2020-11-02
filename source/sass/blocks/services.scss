@@ -143,6 +143,7 @@
 
     &--production .services__link {
       background: url("../img/card-1-t@1x.png") no-repeat 0 0;
+      width: 715px;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url("../img/card-1-t@2x.png");

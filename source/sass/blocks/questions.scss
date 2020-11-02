@@ -150,6 +150,7 @@
   width: 270px;
   margin-left: 3px;
   padding: 14px 0;
+  order: 1;
 
   font-size: 14px;
   font-family: $roboto-c;
@@ -182,6 +183,10 @@
   color: $white;
 }
 
+.questions label[for="questions-checkbox"] {
+  order: 2;
+}
+
 .questions input[type="checkbox"] + .questions__checkbox-indicator {
   position: absolute;
   top: 0;
@@ -195,6 +200,10 @@
   background: rgba(0, 0, 0, 0);
   cursor: pointer;
   outline: none;
+
+  &:focus {
+    opacity: 0.5;
+  }
 }
 
 .questions input[type="checkbox"]:checked + .questions__checkbox-indicator {
@@ -207,6 +216,10 @@
     padding-bottom: 103px;
 
     background: $blue;
+  }
+
+  .questions li:first-of-type {
+    margin-bottom: 22px;
   }
 
   .questions h2 {
@@ -296,7 +309,7 @@
     margin-bottom: 27px;
   }
 
-  .questions label[for="checkbox"] {
+  .questions label[for="questions-checkbox"] {
     margin-left: 33px;
   }
 

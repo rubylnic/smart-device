@@ -37,7 +37,7 @@
   margin-bottom: 30px;
   padding: 98px 42px 67px 44px;
 
-  border: solid 1px $gray;
+  border: solid 1px #ebebeb;
   border-left: solid 3px $blue;
   background-color: $white;
 
@@ -56,6 +56,11 @@
   &:hover .features__icon-img {
     filter: brightness(0) invert(1);
   }
+}
+
+.features__item--pp-pr-temp {
+  padding-right: 30px;
+  //паддинг меньше, чем у остальных
 }
 
 .features__icon {
@@ -79,6 +84,10 @@
 
     &--small {
       min-height: 232px;
+    }
+
+    &--pp-pr-temp {
+      padding-right: 22px;
     }
   }
 
